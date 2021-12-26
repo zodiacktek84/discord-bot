@@ -1,11 +1,10 @@
-console.log(process.env.TOKEN);
+const { Client, Intents } = require('discord.js');
 
-const Discord = require("discord.js");
-const Bot = new Discord.Client({
+const Bot = new Client({
     intents: [ 
-        Discord.Intents.FLAGS.GUILDS,
-        Discord.Intents.FLAGS.GUILD_MEMBERS,
-        Discord.Intents.FLAGS.GUILD_MESSAGES
+        Intents.FLAGS.GUILDS,
+        Intents.FLAGS.GUILD_MEMBERS,
+        Intents.FLAGS.GUILD_MESSAGES
     ]
 });
 
