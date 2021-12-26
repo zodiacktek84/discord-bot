@@ -9,14 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "discord.js": "^13.3.1"
   },
   "scripts": {
     "start": "node index.js",
     "build": "webpack"
   },
   "engines": {
-    "node": "8.x",
-    "npm": "*"
-  },
+    "node": "16.x"
+  }
 }
