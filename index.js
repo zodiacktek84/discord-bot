@@ -24,9 +24,8 @@ Bot.on("guildMemberRemove", member => {
 
 
 Bot.on("message", (message) => {
-// Bot.on("messageCreate", (message) => {
         if(message.content == prefix + "pret") {
-
+            if(message.member.roles.cache.has("923754058416803930")){
             var embedpret = new Discord.MessageEmbed()
                 .setColor("#FF0000")
                 .setTitle("Votre commande est prête !")
@@ -34,11 +33,13 @@ Bot.on("message", (message) => {
                 .setDescription("Je reviens vers toi car votre véhicule commander est prêt ! Vous pouvez vous rendre au Platinium VIP l'orsque nous somme ouvert pour venir récupéré votre véhicule !")
 
             message.channel.send(embedpret);
-            // message.channel.send({embeds: [embedpret]});
+        } else {
+            message.reply("Tu n'a pas le rôle adéquat pour effectuer cette action !")
         }
+    }
 
         if(message.content == prefix + "ouvert") {
-
+            if(message.member.roles.cache.has("923754058416803930")){
             var embedopen = new Discord.MessageEmbed()
                 .setColor("#FF0000")
                 .setTitle("Nous somme ouvert !")
@@ -46,8 +47,10 @@ Bot.on("message", (message) => {
                 .setDescription("L'entreprise platinium VIP est ouverte n'hésitez pas à passer à l'entreprise !")
 
             message.channel.send(embedopen);
-            // message.channel.send({embeds: [embedopen]});
+        } else {
+            message.reply("Tu n'a pas le rôle adéquat pour effectuer cette action !")
         }
+    }
 
         if(message.content == prefix + "fermer") {
             if(message.member.roles.cache.has("923754058416803930")){
@@ -58,7 +61,6 @@ Bot.on("message", (message) => {
                 .setDescription("L'entreprise platinium VIP est fermer a la prochaine !")
 
             message.channel.send(embedclose);
-            // message.channel.send({embeds: [embedclose]});
             } else {
                 message.reply("Tu n'a pas le rôle adéquat pour effectuer cette action !")
             }
