@@ -23,7 +23,8 @@ Bot.on("guildMemberRemove", member => {
 });
 
 
-Bot.on("messageCreate", (message) => {
+Bot.on("message", (message) => {
+// Bot.on("messageCreate", (message) => {
         if(message.content == prefix + "pret") {
 
             var embedpret = new Discord.MessageEmbed()
@@ -32,7 +33,8 @@ Bot.on("messageCreate", (message) => {
                 .setAuthor("Secrétaire du Platinium VIP", "")
                 .setDescription("Je reviens vers toi car votre véhicule commander est prêt ! Vous pouvez vous rendre au Platinium VIP l'orsque nous somme ouvert pour venir récupéré votre véhicule !")
 
-            message.channel.send({embeds: [embedpret]});
+            message.channel.send(embedpret);
+            // message.channel.send({embeds: [embedpret]});
         }
 
         if(message.content == prefix + "ouvert") {
@@ -43,7 +45,8 @@ Bot.on("messageCreate", (message) => {
                 .setAuthor("Secrétaire du Platinium VIP", "")
                 .setDescription("L'entreprise platinium VIP est ouverte n'hésitez pas à passer à l'entreprise !")
 
-            message.channel.send({embeds: [embedopen]});
+            message.channel.send(embedopen);
+            // message.channel.send({embeds: [embedopen]});
         }
 
         if(message.content == prefix + "fermer") {
@@ -54,7 +57,8 @@ Bot.on("messageCreate", (message) => {
                 .setAuthor("Secrétaire du Platinium VIP", "")
                 .setDescription("L'entreprise platinium VIP est fermer a la prochaine !")
 
-            message.channel.send({embeds: [embedclose]});
+            message.channel.send(embedclose);
+            // message.channel.send({embeds: [embedclose]});
             } else {
                 message.reply("Tu n'a pas le rôle adéquat pour effectuer cette action !")
             }
