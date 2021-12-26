@@ -13,7 +13,6 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "webpack"
   },
   "engines": {
     "node": "16.x"
