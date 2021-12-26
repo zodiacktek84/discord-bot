@@ -1,3 +1,5 @@
+console.log(process.env.TOKEN);
+
 const Discord = require("discord.js");
 const Bot = new Discord.Client({
     intents: [ 
