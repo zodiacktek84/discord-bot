@@ -1,10 +1,9 @@
-const { Client, Intents } = require('discord.js');
-
-const Bot = new Client({
+const Discord = require("discord.js");
+const Bot = new Discord.Client({
     intents: [ 
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_MEMBERS,
-        Intents.FLAGS.GUILD_MESSAGES
+        Discord.Intents.FLAGS.GUILDS,
+        Discord.Intents.FLAGS.GUILD_MEMBERS,
+        Discord.Intents.FLAGS.GUILD_MESSAGES
     ]
 });
 
