@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const Bot = new Discord.Client({
-    // intents: [ 
-    //     Discord.Intents.FLAGS.GUILDS,
-    //     Discord.Intents.FLAGS.GUILD_MEMBERS,
-    //     Discord.Intents.FLAGS.GUILD_MESSAGES
-    // ]
+    intents: [ 
+        Discord.Intents.FLAGS.GUILDS,
+        Discord.Intents.FLAGS.GUILD_MEMBERS,
+        Discord.Intents.FLAGS.GUILD_MESSAGES
+    ]
 });
 
 const prefix = "!";
